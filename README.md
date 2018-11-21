@@ -1,0 +1,1 @@
+# ts-add-module-exports
