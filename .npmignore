@@ -1,0 +1,8 @@
+/demo
+/src
+/test
+/types
+/.prettierignore
+/jest.config.js
+/yarn.lock
+/tsconfig*.json

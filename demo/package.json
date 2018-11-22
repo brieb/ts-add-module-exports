@@ -1,0 +1,7 @@
+{
+  "name": "demo",
+  "private": true,
+  "scripts": {
+    "build": "../node_modules/.bin/rimraf out && ../node_modules/.bin/tsc && node ../lib/index.js"
+  }
+}

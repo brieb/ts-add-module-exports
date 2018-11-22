@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`addModuleExports Properly transforms demo 1`] = `
+Array [
+  "out/root-level-file.js",
+  "out/src/export-default.js",
+  "out/src/export-equals-obj.js",
+  "out/src/export-equals.js",
+  "out/src/export-named.js",
+]
+`;
+
+exports[`addModuleExports Properly transforms demo: out/root-level-file.js 1`] = `
+"\\"use strict\\";;
+Object.defineProperty(exports, \\"__esModule\\", { value: true });
+function fn() { }
+exports.default = fn;
+module.exports = exports[\\"default\\"];
+"
+`;
+
+exports[`addModuleExports Properly transforms demo: out/src/export-default.js 1`] = `
+"\\"use strict\\";;
+Object.defineProperty(exports, \\"__esModule\\", { value: true });
+function main() {
+    console.log(\\"main\\");
+}
+exports.default = main;
+module.exports = exports[\\"default\\"];
+"
+`;
+
+exports[`addModuleExports Properly transforms demo: out/src/export-equals.js 1`] = `
+"\\"use strict\\";
+function main() {
+    console.log(\\"main\\");
+}
+module.exports = main;
+"
+`;
+
+exports[`addModuleExports Properly transforms demo: out/src/export-equals-obj.js 1`] = `
+"\\"use strict\\";
+function main() {
+    console.log(\\"main\\");
+}
+module.exports = {
+    main: main
+};
+"
+`;
+
+exports[`addModuleExports Properly transforms demo: out/src/export-named.js 1`] = `
+"\\"use strict\\";
+Object.defineProperty(exports, \\"__esModule\\", { value: true });
+function main() {
+    console.log(\\"main\\");
+}
+exports.default = main;
+function named() {
+    console.log(\\"named\\");
+}
+exports.named = named;
+"
+`;

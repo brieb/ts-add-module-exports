@@ -1,0 +1,36 @@
+{
+  "name": "ts-add-module-exports",
+  "version": "0.0.0",
+  "description": "",
+  "main": "./lib/index.js",
+  "bin": "./bin/ts-add-module-exports",
+  "scripts": {
+    "prettier": "prettier \"**/*.ts\" --write",
+    "test": "tsc --noEmit && jest && prettier \"**/*.ts\" --list-different",
+    "jest": "jest",
+    "build": "rimraf lib && tsc -p tsconfig.build.json",
+    "prepack": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brieb/ts-add-module-exports.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brieb/ts-add-module-exports/issues"
+  },
+  "homepage": "https://github.com/brieb/ts-add-module-exports#readme",
+  "dependencies": {
+    "ast-types": "^0.11.6",
+    "recast": "^0.16.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.9",
+    "@types/node": "^10.12.10",
+    "jest": "^23.6.0",
+    "prettier": "^1.15.2",
+    "rimraf": "^2.6.2",
+    "ts-jest": "^23.10.4",
+    "typescript": "^3.1.6"
+  }
+}
