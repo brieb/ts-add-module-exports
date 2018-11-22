@@ -1,6 +1,19 @@
 # ts-add-module-exports
 
-Adds `module.exports = exports['default'];` for `exports.default`, for CommonJS default export interoperability.
+Post-processes TypeScript compiler emitted js files to add `module.exports = exports['default'];` for `exports.default`, for CommonJS default export interoperability.
+
+Example usage:
+
+```
+// package.json
+...
+  "scripts": {
+    ...
+    "build": "tsc && ts-add-module-exports",
+    ...
+  }
+...
+```
 
 The TypeScript compiler transforms
 
@@ -28,4 +41,4 @@ require("./main")
 
 This script adds `module.exports = exports['default'];` if _only_ the `exports.default` expression exists.
 
-Like [babel-plugin-add-module-exports](https://www.npmjs.com/package/babel-plugin-add-module-exports), but for a TS build.
+Like [babel-plugin-add-module-exports](https://www.npmjs.com/package/babel-plugin-add-module-exports), but for a TS build setup.
