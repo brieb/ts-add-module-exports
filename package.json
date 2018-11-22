@@ -2,6 +2,9 @@
   "name": "ts-add-module-exports",
   "version": "1.0.0",
   "description": "",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "main": "./lib/index.js",
   "bin": "./bin/ts-add-module-exports",
   "scripts": {
